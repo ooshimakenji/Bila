@@ -1,19 +1,25 @@
-# Getting Started
-Install the dependencies and run the project
-```
+# Bila - Cartão de Aniversário
+
+Cartão de aniversário interativo para a Bila (Beyonce, o poodle branco), com GIFs, vídeos e animações.
+
+## Sobre
+
+Página web comemorativa com:
+- Fotos e vídeos da Bila
+- GIFs animados temáticos
+- Efeito de hover para revelar presentes
+- Design divertido com a fonte Happy Monkey
+
+## Stack
+
+- HTML5 + CSS3
+- Vite (bundler)
+
+## Instalação
+
+```bash
+git clone https://github.com/ooshimakenji/Bila.git
+cd Bila
 npm install
 npm start
 ```
-
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
-
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
-
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
-
-Happy Coding!
