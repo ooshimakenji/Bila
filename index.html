@@ -7,24 +7,30 @@
     </head>
     <body>
         <div id="header">
-            <h1>Parabéns para a bilinha 🎉</h1>
-            <img id="bff-img" src="images/bilinha.jpeg">
-            <h2 id="bday-age">Beyonce o poodle branco</h2>
+            <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns Bilinha 🎉</title>
+            <img id="bff-img" src="images/bilinha.jpeg" alt="Beyoncé a poodle branca">
+            <h2 id="bday-age">Beyonce, o poodle branco!</h2>
             <h4 id="bday-date">26.03.2015</h4>
         </div>
         
         <div class="gift-section">
-            <h2 class="gift-title">Que cachorro é esse? 🐶</h2>
-            <h3 class="gift-hint">(Passe o mouse para abrir o presente)</h3>
-            <div class="gift-img" id="gift-img-happy">
-                <video class="video-bg" muted loop>
-                    <source src="images/bilaCurious.mp4" type="video/mp4">
-                    
+    <h2 class="gift-title">Que cachorro é esse? 🐶</h2>
+    <h3 class="gift-hint">(Passe o mouse para abrir o presente)</h3>
+
+    <div class="gift-img" id="gift-img-happy">
+        <video class="video-bg" muted loop playsinline preload="metadata">
+            <source src="images/bilaCurious.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
                 </video>
             </div>
         </div>
         
-       
+        <!--esqueceu de alinhar umas divs ein amigao-->
+        
         <div class="gift-section">
             <h2 class="gift-title">Do rabinho mais rapido do leste catarinense 🦴</h2>
             <div class="gift-img" id="gift-img-genius">
@@ -46,7 +52,7 @@
         </div>
         
         <div class="gift-section">
-            <h2 class="gift-title">Caalma bila 🐩</h2>
+            <h2 class="gift-title">É a bila! ... eita 🐩</h2>
             <div class="gift-img" id="gift-img-cheers">
                 <video class="video-bg" muted loop>
                     <source src="images/calma-bila.mp4" type="video/mp4">
@@ -55,21 +61,33 @@
             </div>
         </div>
         
-        <p id="footer">Crie também seu proprio site de aniversário. <br>De uma olhanda nesse <a href="https://scrimba.com/learn/htmlandcss" target="_blank">curso HTML & CSS.</a></p>
+        <p id="footer">Crie também seu próprio site de aniversário. <br>Dê uma olhada nesse <a href="https://scrimba.com/learn/htmlandcss" target="_blank">curso HTML & CSS.</a></p>
         
         <script>
-         
-            const videos = document.querySelectorAll('.video-bg');
-            videos.forEach(video => {
-                const container = video.parentElement;
-                container.addEventListener('mouseenter', () => {
-                    video.play();
-                });
-                container.addEventListener('mouseleave', () => {
-                    video.pause();
-                    video.currentTime = 0; 
-                });
-            });
-        </script>
+        
+            
+    const videos = document.querySelectorAll('.video-bg');
+    videos.forEach(video => {
+        const container = video.parentElement;
+
+        // Desktop hover
+        container.addEventListener('mouseenter', () => video.play());
+        container.addEventListener('mouseleave', () => {
+            video.pause();
+            video.currentTime = 0;
+        });
+
+        // Mobile touch
+        container.addEventListener('touchstart', () => {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+                video.currentTime = 0;
+            }
+        }, { passive: true });
+    });
+</script>
+        
     </body>
 </html>
